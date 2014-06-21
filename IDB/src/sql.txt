@@ -1,0 +1,243 @@
+
+ CREATE TABLE NAME(
+ NAMES VARCHAR(20),
+AGE INT,
+CONSTRAINT pk_name PRIMARY KEY (NAMES)
+);
+//////////////////////////////////////////////////
+INSERT INTO NAME VALUES( 'SANKA',23);
+////////////////////////////////////////////////
+
+ASSIGNMENT 07
+
+CREATE TABLE Parts(
+Pno varchar(5),
+Pname varchar(10),
+Colour varchar(10),
+Weight int,
+City varchar(10),
+CONSTRAINT PKEY PRIMARY KEY(Pno )
+);
+
+//------------------------------------------------ for visible the table command == describe Parts;
+2
+INSERT INTO Parts VALUES('P1','Nut','Red',12,'London');
+INSERT INTO Parts VALUES('P2','Bolt','Green',17, 'Paris');
+INSERT INTO Parts VALUES('P3','Screw','Blue', 17,'Rome');
+INSERT INTO Parts VALUES('P4','Screw','Red',14, 'London');
+INSERT INTO Parts VALUES('P5','Cam','Blue', 12,'Paris');
+INSERT INTO Parts VALUES('P6','Cog','Red', 19,'London');
+INSERT INTO Parts VALUES('P7','Nut','Green',12, 'London');
+INSERT INTO Parts VALUES('P8','Nut','Red',57,'London');
+///////////////////////////////////////////////////
+ select* from Parts;
+//---------------------------------------------------------------------
+UPDATE Parts 
+set Pname='NUT' ,Colour='Red'
+WHERE  PNO='P8';
+//---------------------------------------------------------------------
+CREATE TABLE Supplier(
+Sno varchar(5),
+Sname varchar(10),
+Status int,
+City varchar(10),
+CONSTRAINT P2KEY PRIMARY KEY(Sno )
+);
+//---------------------------------------------------------------------
+INSERT INTO Supplier VALUES('S1','Smith',20,'London');
+INSERT INTO Supplier VALUES('S2','Jones',10,'Paris');
+INSERT INTO Supplier VALUES('S3','Blacke',30,'Paris');
+INSERT INTO Supplier VALUES('S4','Clark',20,'London');
+INSERT INTO Supplier VALUES('S5','Adams',30,'Athens');
+//------------------------------------------------------------------
+SHOW TABLES VLAUES  BY THE COMMAND == select* from Parts;
+//------------------------------------------------------------------
+CREATE TABLE Shipment(
+Sno varchar(5),
+Sname varchar(10),
+Status int,
+City varchar(10),
+CONSTRAINT P2KEY PRIMARY KEY(Sno )
+);
+//----------------
+update or edit table can add colomn or...
+mysql> alter table tute9 add bdate date;
+//-------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mysql code project lybsys
+
+ create table books(
+ author varchar(30) not null,
+ title varchar(30) not null,
+ assno varchar(30) not null,
+ status varchar(20) not null,
+ isbn varchar(13) not null,
+ subject varchar(20),
+ classno varchar(20),
+ constraint pkey primary key(isbn)
+ );
+
+
+
+CREATE TABLE `books` (
+ // `assno` int(11) NOT NULL auto_increment,
+  `Title` varchar(200) NOT NULL default '',
+  //`author` varchar(200) NOT NULL default '',
+  `author2` varchar(200) NOT NULL default '',
+  `author3` varchar(200) NOT NULL default '',
+  `isbn` varchar(20) NOT NULL default '',
+  `edition` varchar(100) NOT NULL default '',
+  `classNo` varchar(200) NOT NULL default '',
+  `price` varchar(100) NOT NULL default '',
+  `publisher` varchar(200) NOT NULL default '',
+  `publishYear` varchar(20) NOT NULL default '',
+  `publishPlace` varchar(200) NOT NULL default '',
+  `Status` varchar(100) NOT NULL default '',
+ // `subject` varchar(100) NOT NULL default '',
+  PRIMARY KEY  (`assno`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+
+
+
+
+
+
+
+
+
+INSERT INTO books VALUES('Athor konen doil','sholock homes','1','in','1','english','004.192.248.');
+INSERT INTO books VALUES('martin','madolduwa','2','in','2','sinhala','004.192.248.');
+INSERT INTO books VALUES('bill','white house','3','in','3','politics ','004.192.248.');
+INSERT INTO books VALUES('martin','Gamperaliya','4','in','4','tamil','004.192.248.');
+INSERT INTO books VALUES('martin','kaliyugaya','5','in','5','tamil','004.192.248.');
+INSERT INTO books VALUES('martin','NETWORK ROUTERS','6','in','6','COMPUTER NETWORKING','004.192.248.');
+INSERT INTO books VALUES('martin ayya','NETWORK ROUTERS','7','in','7','COMPUTER NETWORKING','004.192.248.');
+INSERT INTO books VALUES('martin','nonsense','8','in','8','english','004.192.248.');
+INSERT INTO books VALUES('ricky martin','hero','9','in','9','music','004.192.248.');
+
+create table vender(
+vender_id varchar(30) not null auto_increment,
+vender_name varchar(30) not null,
+vender_address varchar(30) not null,
+vender_telephone varchar(30),
+vender_mobile varchar(30),
+vender_email varchar(30) not null,
+vender_location varchar(30) not null,
+vender_date varchar(30) not null,
+vender_web varchar(30),
+ constraint pkey primary key(vender_id,)
+);
+
+ create table vender(
+ vender_id int(30) not null auto_increment,
+ vender_name varchar(30) not null,
+ vender_address varchar(30) not null,
+ vender_telephone varchar(30),
+ vender_mobile varchar(30),
+ vender_email varchar(30) not null,
+ vender_location varchar(30) not null,
+ vender_date varchar(30) not null,
+ vender_web varchar(30),
+  constraint pkey primary key(vender_id,vender_name)
+ );
+
+
+
+
+
+
+ 
+
+
+ create table request(
+ requestid int(11) not null,
+ title varchar(30) not null,
+ author1 varchar(30) not null,
+  author2 varchar(30),
+ author3 varchar(30),
+ edition varchar(30) not null,
+ isbn varchar(30) not null,
+ publisher varchar(20) not null,
+  city varchar(20),
+ year varchar(20),
+ studentID varchar(20),
+votes int(200) not null,
+ constraint pkey primary key( requestid)
+ );
+
+INSERT INTO request VALUES(1,"hero",'ricky martin',"","",'frist','1234567819','blackwells','newyork','2007.11.20','64087F',1);
+
+ create table remonendation(
+ 
+ id int(11) not null,
+ title varchar(30) not null,
+ author1 varchar(30) not null,
+  author2 varchar(30),
+ author3 varchar(30),
+ edition varchar(30) not null,
+ isbn varchar(30) not null,
+ publisher varchar(20) not null,
+  city varchar(20),
+ year varchar(20),
+  recomendedby varchar(50),
+  name varchar(50),
+  
+ constraint pkey primary key(id)
+ );
+
+INSERT INTO remonendation VALUES(1,"hero",'ricky martin',"","",'frist','1234567819','blackwells','newyork','2007.11.20','64087F',"sanka");
+INSERT INTO remonendation VALUES(2,"sanka",'Bill',"","",'frist','1234567819','blackwells','newyork','2007.11.20','IT-d-1',"Mr.dean");
+
+
+
+ create table select_to_order(
+ bookid int(11) not null auto_increment,
+ title varchar(30),
+ author1 varchar(100),
+ author2 varchar(100),
+ author3 varchar(100),
+ edition varchar(30),
+ isbn varchar(30),
+ publisher varchar(100),
+ city varchar(100),
+ year varchar(20),
+ request varchar(50),
+ vender varchar(50),
+ price int(10),
+ copy int(10),
+ status char(1) default 0,
+ orderid int(11),
+ constraint pkey primary key(bookid)
+ );
+
+create table received_books(
+ assno int(10) not null auto_increment,
+ orderid int(11),
+ billno varchar(100),
+ price int(100),
+ date varchar(30),
+ description varchar(500),
+ bookid int(10),
+ constraint pkey primary key(assno)
+ );
+
+

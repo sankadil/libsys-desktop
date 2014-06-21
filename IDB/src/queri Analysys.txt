@@ -1,0 +1,60 @@
+
+
+
+SELECT author,title,assno,isbn FROM books WHERE author LIKE 'martin%'  OR author LIKE '% martin%' OR author LIKE 'doil%' OR author LIKE '%  doil%'
+
+
+SELECT *                                   FROM books WHERE author      LIKE    'martin%'             OR author        LIKE '% martin%'
+
+SELECT author,title,assno,isbn FROM books WHERE field_type LIKE  ' key_word[0] %'  OR field_type   LIKE '% key_word[0]%'
+/*
+
+if(words_connecter != "PHRASE")
+{
+
+
+String q1="SELECT author,title,assno,isbn FROM books WHERE";
+
+String q2=field_type+"  LIKE '"+  key_word[0] +"%'" +"  OR "+ field_type +"  LIKE '"+"%"+" "+ key_word[0]+"%'";
+
+for(int i=1;i<key_word.length;i++)
+{
+
+q2=q2+word_conecter+field_type+"  LIKE '"+  key_word[i] +"%'" +"  OR "+ field_type +"  LIKE '"+"%"+" "+ key_word[i]+"%'";
+
+}
+
+System.out.println("executed query is following \n \t"+q1+q2);
+reset=stm.executeQuery(q1+q2);
+
+
+}
+
+*/
+
+SELECT author,title,assno,isbn FROM books WHERE author  LIKE 'martin%'  OR author  LIKE '% martin%'AND author  LIKE 'ricky%'  OR author  LIKE '% ricky%'
+
+/*
+
+
+SELECT author,title,assno,isbn FROM books WHERE
+(author  LIKE 'martin%'  OR author  LIKE '% martin%')
+AND (title  LIKE 'k%'  OR title  LIKE '% k%') AND
+(subject  LIKE 't%'  OR subject  LIKE '% t%')
+
+
+
+SELECT author,title,assno,isbn FROM books WHERE (author  LIKE 'martin%'  OR author  LIKE '% martin%'
+) NOT (title  LIKE 'n%'  OR title  LIKE '% n%') NOT (subject  LIKE 'computer%'  OR subject  LIKE '%
+computer%')
+
+*/
+
+
+INSERT INTO vender VALUES('lyb-bw-001','Blackwell','1/28,gawapalace','London','0786173455','Blackwell','London','2007-11-18','www.Blackwell.com);
+
+
+
+Update vender set vender_id='fdsfs' , vender_name='fsdsankadilmadu' , vender_address='fds',vender_telephone='12222222222222222222' , vender_mobile='1233333333333' , vender_email='fds@weqwe' , vender_location='fs' , vender_date ='sf' , vender_web= 'fsdf' ) WHERE vender_id =fsd
+
+
